@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Change App</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+    .container {
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chaitanya Inamdar R5 42225</h1>
+    <button id="colorButton">Change Background Color</button>
+  </div>
+
+  <script>
+    const button = document.getElementById('colorButton');
+    let isWhite = true;
+
+    button.addEventListener('click', function() {
+      document.body.style.backgroundColor = isWhite ? 'lightblue' : 'white';
+      isWhite = !isWhite;
+    });
+  </script>
+</body>
+</html>
